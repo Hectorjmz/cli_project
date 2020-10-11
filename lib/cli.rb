@@ -27,9 +27,9 @@ class CLI
                 break
             elsif (input.to_i > 0 && input.to_i <= Breweries.all.length)
                 input = input.to_i
-                    if input > 0 
-                        print_info_store(input)
-                    end
+                if input > 0 
+                    print_info_store(input)
+                end
             else
                 puts "That input is not avaliable"
                 puts ""
@@ -55,8 +55,12 @@ class CLI
     end
 
     def print_stores(stores)
-        stores.each.with_index(1) do |store, i|
-            puts "#{i}) #{store.name}"
+        if stores.length > 0
+            stores.each.with_index(1) do |store, i|
+                puts "#{i}) #{store.name}"
+            end
+        else
+            puts "We don't have any option there"
         end
     end
 

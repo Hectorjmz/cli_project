@@ -6,47 +6,23 @@ and let you know the most important information about each store as Name, Addres
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+First go to the repository https://github.com/Hectorjmz/cli_project, then fork and clone.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
 
 ### Usage
 
-
+<>
 Run this application from the command line using "ruby bin/start". 
 First you type any key or 'exit' if you want to exit.
 In case you type anything different than 'exit' you may type a US city that you are interested to look at.
-You will see a enumerated list of Breweries in the command line. (If you have no )
+You will see a enumerated list of Breweries in the command line.
+Choose one and input the index or type exit 
+</>
 
-
-
-
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-I use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Author
 
 * **Hector Jimenez** - CLI Brewery Finder - [Hectorjmz](https://github.com/Hectorjmz/cli_project)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
