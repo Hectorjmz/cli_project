@@ -1,8 +1,3 @@
-#keep track of our drinks
-#turn our responses into objects
-#save all drinks created
-require 'json'
-require 'pp'
 
 class Breweries
     attr_accessor :name, :id, :brewerie_type, :street, :city, :state, :postal_code, :country, :phone, :website, :all
@@ -30,7 +25,5 @@ class Breweries
     def self.clear
         @@all = []
     end
-
-
 
 end

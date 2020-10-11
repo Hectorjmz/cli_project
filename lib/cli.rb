@@ -8,8 +8,11 @@ class CLI
         main_menu
         input = gets.strip.downcase
         while input != 'exit' do
-            puts "Input the city you are interested in find some brewing stores (type 'exit' to exit)"
+            puts ""
+            puts "Input the city you are interested in finding a brewery (type 'exit' to exit)"
+            puts ""
             input = gets.strip.downcase
+            puts ""
             if input == 'exit'
                 break
             end
@@ -17,8 +20,9 @@ class CLI
             stores = Breweries.all
             print_stores(stores)
             puts ""
-            puts "If you want more info of any showed brewery, type its number (type 'exit' to exit)"
-            input = gets.strip
+            puts "Enter the number of the option you would like more information (type 'exit' to exit)"
+            puts ""
+            input = gets.strip.downcase
             if input == 'exit'
                 break
             elsif (input.to_i > 0 && input.to_i <= Breweries.all.length)
@@ -28,6 +32,7 @@ class CLI
                     end
             else
                 puts "That input is not avaliable"
+                puts ""
             end 
             Breweries.clear    
             puts "Press any key to continue searching (type 'exit' to exit)"
@@ -40,12 +45,13 @@ class CLI
     end
 
     def main_menu
+        puts ""  
+        puts "W E L C O M E   T O   B R E W E R Y   F I N D E R".colorize(:color => :yellow, :background => :black)
+        puts "-------------------------------------------------".colorize(:color => :yellow, :background => :black)
         puts ""
-        puts "WELCOME TO BREWERIY FINDER.."
+        puts "This program helps you to find Breweries based on location"
         puts ""
-        puts "This program help you to find Breweries based in location"
         puts "Type any key to continue (type 'exit' to exit)"
-        # puts "Type 'type' if you want to acces to the type manu (type 'exit' to exit)"
     end
 
     def print_stores(stores)
@@ -57,17 +63,18 @@ class CLI
     def print_info_store(index)
         brew =  Breweries.all[index-1]
         puts ""
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~".colorize(:yellow)
         puts "Name:  #{brew.name}"
-        puts "Id:  #{brew.id}"
-        puts "Brewerie_type:  #{brew.brewerie_type}"
-        puts "Street:  #{brew.street}"
+        puts "Address:  #{brew.street}"
         puts "City:  #{brew.city}"
+        puts "Phone:  #{brew.phone}"
+        puts "Website:  #{brew.website}"
+        puts "Brewerie_type:  #{brew.brewerie_type}"
         puts "State:  #{brew.state}"
         puts "Postal_code:  #{brew.postal_code}"
         puts "Country:  #{brew.country}"
-        puts "Phone:  #{brew.phone}"
-        puts "Website:  #{brew.website}"
-        puts "-----------------------------------------------------"
+        puts "Id:  #{brew.id}"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~".colorize(:yellow)
         puts ""
     end
 
@@ -76,7 +83,6 @@ class CLI
             "“A designated driver helps you party another day.”",
             "“A tree never hits an automobile except in self defense.” » American Proverb",
             "“Allow Life To Thrive, Don’t Drink And Drive.” Slogansmotto",
-            "“Automobiles are not ferocious…. it is man who is to be feared. ” » Robbins B. Stoeckel",
             "“Been To The Bash? Please Don’t Crash!”",
             "“Better To Arrive Sober And Late Than Never.”",
             "“Buzzed driving is drunk driving.”",
@@ -86,19 +92,17 @@ class CLI
             "“Drink, Drunk, Drive, Dead”",
             "“Drinking + Driving = Disaster”",
             "“Drinking And Driving Is A Gamble That You Just Can’t Win.”",
-            "“Drinking And Driving – There Are Stupider Things, But It’S A Very Short List”",
             "“Drive hammered, get slammered.”",
-            "“Driving Hammered Will Get You Nailed”",
             "“Drunk driving is a killer disease.”",
             "“Friends Don’t Let Friends Drive Drunk.”",
-            "“Honk if you love Jesus. Text while driving if you want to meet him.”, as seen on a church sign",
+            "“Honk if you love Jesus. Text while driving if you want to meet him.”",
             "“If Partying Is A Must, Designate A Driver That You Trust.”",
             "“If You Drink And Drive, You’re Going To Make Someone Cry.”",
             "“If you drink, don’t drive. Don’t even putt.” » Dean Martin",
             "“If you must drink and drive, drink Pepsi.” » Bumper sticker"
         ]
 
-        puts quotes_array.sample
+        puts quotes_array.sample.colorize(:blue)
         
     end
 
